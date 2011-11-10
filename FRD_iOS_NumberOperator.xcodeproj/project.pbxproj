@@ -15,6 +15,9 @@
 		16039B92146A918100B8FB7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039B91146A918100B8FB7C /* AppDelegate.m */; };
 		16039B95146A918100B8FB7C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039B94146A918100B8FB7C /* ViewController.m */; };
 		16039B98146A918100B8FB7C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16039B96146A918100B8FB7C /* ViewController.xib */; };
+		16039BA0146A919400B8FB7C /* NumberOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039B9F146A919400B8FB7C /* NumberOperator.m */; };
+		16039BA3146A978000B8FB7C /* NumberOperator+BasicMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039BA2146A978000B8FB7C /* NumberOperator+BasicMath.m */; };
+		16039BA6146A9B2E00B8FB7C /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039BA5146A9B2E00B8FB7C /* UIView+FindFirstResponder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +25,21 @@
 		16039B81146A918100B8FB7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		16039B83146A918100B8FB7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16039B85146A918100B8FB7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		16039B89146A918100B8FB7C /* FRD_iOS_NumberOperator-Info.plist */ = {isa = PBXFileReference; path = "FRD_iOS_NumberOperator-Info.plist"; sourceTree = "<group>"; };
+		16039B89146A918100B8FB7C /* FRD_iOS_NumberOperator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FRD_iOS_NumberOperator-Info.plist"; sourceTree = "<group>"; };
 		16039B8B146A918100B8FB7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16039B8D146A918100B8FB7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		16039B8F146A918100B8FB7C /* FRD_iOS_NumberOperator-Prefix.pch */ = {isa = PBXFileReference; path = "FRD_iOS_NumberOperator-Prefix.pch"; sourceTree = "<group>"; };
-		16039B90146A918100B8FB7C /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		16039B8F146A918100B8FB7C /* FRD_iOS_NumberOperator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FRD_iOS_NumberOperator-Prefix.pch"; sourceTree = "<group>"; };
+		16039B90146A918100B8FB7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		16039B91146A918100B8FB7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		16039B93146A918100B8FB7C /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		16039B93146A918100B8FB7C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		16039B94146A918100B8FB7C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		16039B97146A918100B8FB7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		16039B9E146A919400B8FB7C /* NumberOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOperator.h; sourceTree = "<group>"; };
+		16039B9F146A919400B8FB7C /* NumberOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOperator.m; sourceTree = "<group>"; };
+		16039BA1146A978000B8FB7C /* NumberOperator+BasicMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NumberOperator+BasicMath.h"; sourceTree = "<group>"; };
+		16039BA2146A978000B8FB7C /* NumberOperator+BasicMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NumberOperator+BasicMath.m"; sourceTree = "<group>"; };
+		16039BA4146A9B2E00B8FB7C /* UIView+FindFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindFirstResponder.h"; sourceTree = "<group>"; };
+		16039BA5146A9B2E00B8FB7C /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +92,12 @@
 				16039B94146A918100B8FB7C /* ViewController.m */,
 				16039B96146A918100B8FB7C /* ViewController.xib */,
 				16039B88146A918100B8FB7C /* Supporting Files */,
+				16039B9E146A919400B8FB7C /* NumberOperator.h */,
+				16039B9F146A919400B8FB7C /* NumberOperator.m */,
+				16039BA1146A978000B8FB7C /* NumberOperator+BasicMath.h */,
+				16039BA2146A978000B8FB7C /* NumberOperator+BasicMath.m */,
+				16039BA4146A9B2E00B8FB7C /* UIView+FindFirstResponder.h */,
+				16039BA5146A9B2E00B8FB7C /* UIView+FindFirstResponder.m */,
 			);
 			path = FRD_iOS_NumberOperator;
 			sourceTree = "<group>";
@@ -163,6 +178,9 @@
 				16039B8E146A918100B8FB7C /* main.m in Sources */,
 				16039B92146A918100B8FB7C /* AppDelegate.m in Sources */,
 				16039B95146A918100B8FB7C /* ViewController.m in Sources */,
+				16039BA0146A919400B8FB7C /* NumberOperator.m in Sources */,
+				16039BA3146A978000B8FB7C /* NumberOperator+BasicMath.m in Sources */,
+				16039BA6146A9B2E00B8FB7C /* UIView+FindFirstResponder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

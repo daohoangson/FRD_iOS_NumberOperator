@@ -10,18 +10,16 @@
 
 @implementation NumberOperator
 
-- (id)initWithString:(NSString*)number1 andString:(NSString*)number2
-{
-    int i1 = [number1 intValue];
-    int i2 = [number2 intValue];
+- (id)initWithString:(NSString*)number1 andString:(NSString*)number2 {
+    float f1 = [number1 floatValue];
+    float f2 = [number2 floatValue];
     
-    return [self initWithInt:i1 andNumber:i2];
+    return [self initWithFloat:f1 andFloat:f2];
 }
 
-- (id)initWithInt:(int)number1 andNumber:(int)number2
-{
-    _number1 = (id) [[NSNumber alloc] initWithInt:number1];
-    _number2 = (id) [[NSNumber alloc] initWithInt:number2];
+- (id)initWithFloat:(float)number1 andFloat:(float)number2 {
+    _number1 = (id) [[NSNumber alloc] initWithFloat:number1];
+    _number2 = (id) [[NSNumber alloc] initWithFloat:number2];
     
     return self;
 }

@@ -15,6 +15,6 @@
 
 - (id)initWithString:(NSString*)number1 andString:(NSString*)number2;
 
-- (id)initWithInt:(int)number1 andNumber:(int)number2;
+- (id)initWithFloat:(float)number1 andFloat:(float)number2;
 
 @end

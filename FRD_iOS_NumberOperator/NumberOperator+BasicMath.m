@@ -12,26 +12,26 @@
 
 - (NSNumber *)add
 {
-    int result = [_number1 intValue] + [_number2 intValue];
-    return [[NSNumber alloc] initWithInt:result];
+    float result = [_number1 floatValue] + [_number2 floatValue];
+    return [[NSNumber alloc] initWithFloat:result];
 }
 
 - (NSNumber *)subtract
 {
-    int result = [_number1 intValue] - [_number2 intValue];
-    return [[NSNumber alloc] initWithInt:result];
+    float result = [_number1 floatValue] - [_number2 floatValue];
+    return [[NSNumber alloc] initWithFloat:result];
 }
 
 - (NSNumber *)multiply
 {
-    int result = [_number1 intValue] * [_number2 intValue];
-    return [[NSNumber alloc] initWithInt:result];
+    float result = [_number1 floatValue] * [_number2 floatValue];
+    return [[NSNumber alloc] initWithFloat:result];
 }
 
 - (NSNumber *)divide
 {
-    int result = [_number1 intValue] / [_number2 intValue];
-    return [[NSNumber alloc] initWithInt:result];
+    float result = [_number1 floatValue] / [_number2 floatValue];
+    return [[NSNumber alloc] initWithFloat:result];
 }
 
 @end
