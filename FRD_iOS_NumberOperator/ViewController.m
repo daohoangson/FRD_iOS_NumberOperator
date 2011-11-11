@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AboutViewController.h"
 #import "NumberOperator+BasicMath.h"
 #import "UIView+FindFirstResponder.h"
 
@@ -241,6 +242,19 @@
 }
 
 - (IBAction)btnAbout:(id)sender {
+    AboutViewController *avc = [[AboutViewController alloc] init];
+    /*
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDelay:0.5];
+    [UIView setAnimationTransition:UIViewAnimationOptionTransitionFlipFromRight forView:[self view] cache:YES];
+    [self.view addSubview:[avc view]];
+    [UIView commitAnimations];
+    */
+//    [UIView transitionFromView:[self view] toView:[avc view] duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight completion:nil];
+    
+    [self.navigationController pushViewController:avc animated:YES];
+    
+    [avc release];
 }
 
 
