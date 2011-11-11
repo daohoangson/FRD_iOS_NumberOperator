@@ -11,6 +11,10 @@
 #import "UIView+FindFirstResponder.h"
 
 @implementation ViewController
+@synthesize btnAdd;
+@synthesize btnSubtract;
+@synthesize btnMultiply;
+@synthesize btnDivide;
 @synthesize txtNumber1;
 @synthesize txtNumber2;
 @synthesize lblOperator;
@@ -40,6 +44,7 @@
 
     // reset the calculator
     [self setResult:[NSNumber numberWithFloat:0.0f]];
+    [self setOperator:OP_NONE];
 }
 
 - (void)viewDidUnload
@@ -58,6 +63,10 @@
     [self setBtnEight:nil];
     [self setBtnNine:nil];
     [self setBtnDot:nil];
+    [self setBtnAdd:nil];
+    [self setBtnSubtract:nil];
+    [self setBtnMultiply:nil];
+    [self setBtnDivide:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -104,6 +113,10 @@
     [btnEight release];
     [btnNine release];
     [btnDot release];
+    [btnAdd release];
+    [btnSubtract release];
+    [btnMultiply release];
+    [btnDivide release];
     [super dealloc];
 }
 
@@ -164,23 +177,36 @@
     [self quickResignFirstResponder];
 }
 
-- (IBAction)add:(id)sender {
-    [self setOperator:OP_ADD];
-    [self quickResignFirstResponder];
-}
-
-- (IBAction)subtract:(id)sender {
-    [self setOperator:OP_SUBTRACT];
-    [self quickResignFirstResponder];
-}
-
-- (IBAction)multiply:(id)sender {
-    [self setOperator:OP_MULTIPLY];
-    [self quickResignFirstResponder];
-}
-
-- (IBAction)divide:(id)sender {
-    [self setOperator:OP_DIVIDE];
+- (IBAction)someOperator:(id)sender {
+    OPERATOR op = [self getOperator];
+    NSString *inputNumber = [self getInputNumber];
+    
+    if ([inputNumber length] > 0) {
+        if (op == OP_NONE) {
+            // this is the first operator selected
+            // and an input number is entered
+            // we will accept it as the first number
+            [self setResult:[NSNumber numberWithFloat:0.0f]];
+            [self setInputNumber:inputNumber];
+            [self setOperator:OP_ADD];
+            [self calculate:sender];
+        } else {
+            // some op is already selected
+            // just calculate it
+            [self calculate:sender];
+        }
+    }
+    
+    if (sender == btnAdd) {
+        [self setOperator:OP_ADD];
+    } else if (sender == btnSubtract) {
+        [self setOperator:OP_SUBTRACT];
+    } else if (sender == btnMultiply) {
+        [self setOperator:OP_MULTIPLY];
+    } else if (sender == btnDivide) {
+        [self setOperator:OP_DIVIDE];
+    }
+    
     [self quickResignFirstResponder];
 }
 
@@ -202,12 +228,19 @@
         case OP_DIVIDE:
             result = [numberOperator divide];
             break;
+        case OP_NONE:
+            // do nothing
+            break;
     }
     
     if (result != nil) {
         [self setResult:result];
+        [self setOperator:OP_NONE];
         [result release];
     }
+}
+
+- (IBAction)btnAbout:(id)sender {
 }
 
 
@@ -232,7 +265,7 @@
 }
 
 - (void)setResult:(NSNumber*)result {
-    [txtNumber1 setText:[NSString stringWithFormat:@"%f", [result floatValue]]];
+    [txtNumber1 setText:[NSString stringWithFormat:@"%g", [result floatValue]]];
     [txtNumber2 setText:@""];
     [self setOperator:OP_ADD];
 }
@@ -249,7 +282,7 @@
     } else if ([strOp isEqualToString:@"/"]) {
         return OP_DIVIDE;
     } else {
-        return OP_ADD;
+        return OP_NONE;
     }
 }
 
@@ -266,6 +299,9 @@
             break;
         case OP_DIVIDE:
             [lblOperator setText:@"/"];
+            break;
+        case OP_NONE:
+            [lblOperator setText:@""];
             break;
     }
 }

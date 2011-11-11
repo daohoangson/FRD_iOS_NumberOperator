@@ -10,6 +10,7 @@
 #import "NumberOperator.h"
 
 typedef enum _OPERATOR {
+    OP_NONE,
     OP_ADD,
     OP_SUBTRACT,
     OP_MULTIPLY,
@@ -34,11 +35,14 @@ typedef enum _OPERATOR {
 @property (retain, nonatomic) IBOutlet UIButton *btnDot;
 - (IBAction)numbersOrDot:(id)sender;
 
-- (IBAction)add:(id)sender;
-- (IBAction)subtract:(id)sender;
-- (IBAction)multiply:(id)sender;
-- (IBAction)divide:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *btnAdd;
+@property (retain, nonatomic) IBOutlet UIButton *btnSubtract;
+@property (retain, nonatomic) IBOutlet UIButton *btnMultiply;
+@property (retain, nonatomic) IBOutlet UIButton *btnDivide;
+- (IBAction)someOperator:(id)sender;
 - (IBAction)calculate:(id)sender;
+
+- (IBAction)btnAbout:(id)sender;
 
 - (NSString*)getLastResult;
 - (NSString*)getInputNumber;

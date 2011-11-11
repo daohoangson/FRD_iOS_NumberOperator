@@ -18,6 +18,9 @@
 		16039BA0146A919400B8FB7C /* NumberOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039B9F146A919400B8FB7C /* NumberOperator.m */; };
 		16039BA3146A978000B8FB7C /* NumberOperator+BasicMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039BA2146A978000B8FB7C /* NumberOperator+BasicMath.m */; };
 		16039BA6146A9B2E00B8FB7C /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 16039BA5146A9B2E00B8FB7C /* UIView+FindFirstResponder.m */; };
+		1609A391146D0A3A00D6A201 /* MyUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609A390146D0A3A00D6A201 /* MyUIView.m */; };
+		1609A395146D123C00D6A201 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1609A393146D123C00D6A201 /* AboutViewController.m */; };
+		1609A396146D123C00D6A201 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1609A394146D123C00D6A201 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,11 @@
 		16039BA2146A978000B8FB7C /* NumberOperator+BasicMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NumberOperator+BasicMath.m"; sourceTree = "<group>"; };
 		16039BA4146A9B2E00B8FB7C /* UIView+FindFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindFirstResponder.h"; sourceTree = "<group>"; };
 		16039BA5146A9B2E00B8FB7C /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
+		1609A38F146D0A3A00D6A201 /* MyUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUIView.h; sourceTree = "<group>"; };
+		1609A390146D0A3A00D6A201 /* MyUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUIView.m; sourceTree = "<group>"; };
+		1609A392146D123C00D6A201 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		1609A393146D123C00D6A201 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		1609A394146D123C00D6A201 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,11 @@
 				16039BA2146A978000B8FB7C /* NumberOperator+BasicMath.m */,
 				16039BA4146A9B2E00B8FB7C /* UIView+FindFirstResponder.h */,
 				16039BA5146A9B2E00B8FB7C /* UIView+FindFirstResponder.m */,
+				1609A38F146D0A3A00D6A201 /* MyUIView.h */,
+				1609A390146D0A3A00D6A201 /* MyUIView.m */,
+				1609A392146D123C00D6A201 /* AboutViewController.h */,
+				1609A393146D123C00D6A201 /* AboutViewController.m */,
+				1609A394146D123C00D6A201 /* AboutViewController.xib */,
 			);
 			path = FRD_iOS_NumberOperator;
 			sourceTree = "<group>";
@@ -165,6 +178,7 @@
 			files = (
 				16039B8C146A918100B8FB7C /* InfoPlist.strings in Resources */,
 				16039B98146A918100B8FB7C /* ViewController.xib in Resources */,
+				1609A396146D123C00D6A201 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +195,8 @@
 				16039BA0146A919400B8FB7C /* NumberOperator.m in Sources */,
 				16039BA3146A978000B8FB7C /* NumberOperator+BasicMath.m in Sources */,
 				16039BA6146A9B2E00B8FB7C /* UIView+FindFirstResponder.m in Sources */,
+				1609A391146D0A3A00D6A201 /* MyUIView.m in Sources */,
+				1609A395146D123C00D6A201 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +271,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FRD_iOS_NumberOperator/FRD_iOS_NumberOperator-Prefix.pch";
 				INFOPLIST_FILE = "FRD_iOS_NumberOperator/FRD_iOS_NumberOperator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -266,6 +283,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FRD_iOS_NumberOperator/FRD_iOS_NumberOperator-Prefix.pch";
 				INFOPLIST_FILE = "FRD_iOS_NumberOperator/FRD_iOS_NumberOperator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -290,6 +308,7 @@
 				16039B9D146A918100B8FB7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
